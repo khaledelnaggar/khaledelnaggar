@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khaled El Naggar | Software Developer</title>
+    <meta
+      name="description"
+      content="Portfolio landing page for software developer Khaled El Naggar."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="hero">
+      <nav class="nav">
+        <a href="#hero" class="logo" aria-label="Khaled El Naggar home"
+          >Khaled<span>.</span></a
+        >
+        <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero__content">
+        <div class="hero__intro">
+          <p class="hero__eyebrow">Full-Stack Software Developer</p>
+          <h1>Hi, I’m Khaled. I build elegant, human-centered digital experiences.</h1>
+          <p class="hero__description">
+            With a passion for crafting performant and accessible web applications, I transform
+            complex requirements into elegant solutions. I love collaborating with cross-functional
+            teams to ship features that delight users and drive measurable business outcomes.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a class="btn btn--ghost" href="mailto:hello@khaledelnaggar.dev">Let’s Talk</a>
+          </div>
+          <dl class="hero__meta">
+            <div>
+              <dt>Location</dt>
+              <dd>Remote · GMT+2</dd>
+            </div>
+            <div>
+              <dt>Specialties</dt>
+              <dd>React · TypeScript · Node.js · Cloud</dd>
+            </div>
+            <div>
+              <dt>Currently</dt>
+              <dd>Open to full-time & freelance opportunities</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero__card" role="presentation">
+          <div class="hero__glow"></div>
+          <div class="hero__badge">Available for new projects</div>
+          <div class="hero__profile">
+            <div class="hero__avatar" aria-hidden="true"></div>
+            <div class="hero__profile-content">
+              <h2>Building impactful products</h2>
+              <p>
+                Focused on crafting clean architecture, intuitive interfaces, and maintainable code
+                that scales with your business.
+              </p>
+              <ul class="hero__stats">
+                <li>
+                  <span class="stat__value">6+</span>
+                  <span class="stat__label">Years Experience</span>
+                </li>
+                <li>
+                  <span class="stat__value">25</span>
+                  <span class="stat__label">Projects Delivered</span>
+                </li>
+                <li>
+                  <span class="stat__value">98%</span>
+                  <span class="stat__label">Client Satisfaction</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="about">
+        <div class="section__header">
+          <p class="section__eyebrow">About</p>
+          <h2>Creating scalable solutions with empathy for the user</h2>
+        </div>
+        <div class="about__grid">
+          <p>
+            I'm a product-minded software developer with a strong background in building responsive
+            web applications, scalable backend services, and automated delivery pipelines. Whether
+            it's architecting modern front-ends or optimizing cloud infrastructure, I value
+            maintainability, collaboration, and iterative delivery.
+          </p>
+          <p>
+            Outside of coding, I mentor up-and-coming developers, contribute to open-source
+            projects, and experiment with design systems. I'm always eager to explore new tools and
+            workflows that help teams move faster without sacrificing quality.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="skills">
+        <div class="section__header">
+          <p class="section__eyebrow">Skills</p>
+          <h2>Technical toolkit tailored for modern teams</h2>
+        </div>
+        <div class="skills__grid">
+          <article class="card">
+            <h3>Frontend Engineering</h3>
+            <p>
+              React, Next.js, TypeScript, Tailwind, and design systems expertise to ship accessible
+              and performant user experiences.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Backend Architecture</h3>
+            <p>
+              Node.js, Express, GraphQL, REST APIs, and relational/NoSQL databases for reliable,
+              scalable services.
+            </p>
+          </article>
+          <article class="card">
+            <h3>DevOps & Cloud</h3>
+            <p>
+              AWS, Docker, CI/CD, infrastructure as code, and observability practices that keep
+              systems resilient.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Leadership & Collaboration</h3>
+            <p>
+              Technical mentorship, agile delivery, and product strategy partnership with designers
+              and stakeholders.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section__header">
+          <p class="section__eyebrow">Projects</p>
+          <h2>Selected work that blends functionality with polish</h2>
+        </div>
+        <div class="projects__grid">
+          <article class="project">
+            <div class="project__meta">
+              <span class="project__tag">Fintech Platform</span>
+              <span class="project__year">2023</span>
+            </div>
+            <h3>Velocity Pay</h3>
+            <p>
+              Modernized a payment processing dashboard with React, Redux Toolkit, and serverless
+              APIs, boosting onboarding conversions by 30% and cutting support tickets in half.
+            </p>
+            <ul class="project__stack">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>AWS Lambda</li>
+            </ul>
+            <a class="project__link" href="#">Case study &rarr;</a>
+          </article>
+
+          <article class="project">
+            <div class="project__meta">
+              <span class="project__tag">HealthTech</span>
+              <span class="project__year">2022</span>
+            </div>
+            <h3>PulseCare</h3>
+            <p>
+              Shipped a telemedicine platform leveraging WebRTC, GraphQL, and automated testing to
+              support thousands of secure patient visits per month.
+            </p>
+            <ul class="project__stack">
+              <li>Next.js</li>
+              <li>GraphQL</li>
+              <li>Cypress</li>
+            </ul>
+            <a class="project__link" href="#">Case study &rarr;</a>
+          </article>
+
+          <article class="project">
+            <div class="project__meta">
+              <span class="project__tag">E-commerce</span>
+              <span class="project__year">2021</span>
+            </div>
+            <h3>Nova Market</h3>
+            <p>
+              Led a cross-functional squad to rebuild a high-traffic storefront with server-side
+              rendering, improving Lighthouse performance scores from 68 to 95+.
+            </p>
+            <ul class="project__stack">
+              <li>Next.js</li>
+              <li>Styled Components</li>
+              <li>Vercel</li>
+            </ul>
+            <a class="project__link" href="#">Case study &rarr;</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="experience">
+        <div class="section__header">
+          <p class="section__eyebrow">Experience</p>
+          <h2>Trusted by startups and global teams alike</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__content">
+              <h3>Lead Software Engineer · Stellar Labs</h3>
+              <p class="timeline__meta">2021 — Present · Remote</p>
+              <p>
+                Leading a team of 6 engineers to deliver data-driven products for enterprise clients.
+                Implemented micro frontends and established a design system adopted across the
+                organization.
+              </p>
+            </div>
+          </article>
+          <article class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__content">
+              <h3>Senior Frontend Engineer · Brightwave</h3>
+              <p class="timeline__meta">2018 — 2021 · Cairo</p>
+              <p>
+                Spearheaded the migration of legacy Angular apps to React and TypeScript, reducing
+                defect rates by 40% and accelerating release cadence.
+              </p>
+            </div>
+          </article>
+          <article class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__content">
+              <h3>Software Engineer · Freelance</h3>
+              <p class="timeline__meta">2016 — 2018 · Global</p>
+              <p>
+                Partnered with startups to ship MVPs, architected APIs, and built end-to-end product
+                experiences across web and mobile.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="cta">
+          <div class="cta__copy">
+            <p class="section__eyebrow">Let’s build together</p>
+            <h2>Ready to craft something remarkable?</h2>
+            <p>
+              I’m excited to collaborate on products that make a difference. Share your vision and
+              let’s explore how we can bring it to life.
+            </p>
+          </div>
+          <a class="btn btn--primary" href="mailto:hello@khaledelnaggar.dev">Start a project</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Khaled El Naggar. Crafted with care.</p>
+      <div class="footer__links">
+        <a href="https://github.com/khaledelnaggar" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:hello@khaledelnaggar.dev">Email</a>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
