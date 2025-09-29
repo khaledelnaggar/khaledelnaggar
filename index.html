@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Khaled Elnaggar - Embedded Systems &amp; Software Engineer</title>
+
+    <link href="assets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="container">
+        <a class="logo" href="#">KE</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Khaled Elnaggar</h1>
+        <p class="subtitle">Embedded Systems &amp; Software Engineer</p>
+        <p class="description">
+          I build secure, low-power systems that bridge hardware and
+          software—from STM32/MSP430 firmware and NFC communication to Android
+          apps, cryptography, and backend services. Currently Studying MSc in
+          Sofware Technology &amp; Embedded Systems at TU Graz.
+        </p>
+        <div class="cta-buttons">
+          <a class="btn btn-primary" href="#projects">View My Work</a>
+          <a class="btn btn-secondary" href="#contact">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">About Me</h2>
+        <div class="about-content animate-on-scroll">
+          <div class="about-text">
+            <p>
+              I'm a computer science engineer with a passion for low-level
+              programming, operating systems, and embedded systems. I enjoy
+              digging into how systems work under the hood, from memory
+              management to scheduling policies.
+            </p>
+            <p>
+              My projects vary across multiple areas: implementing a custom
+              malloc/free allocator in C, extending the SWEB OS with thread
+              scheduling and context switching, and building educational RTOS
+              primitives on MSP430. I’ve also explored stereo camera calibration
+              and rectification using OpenCV, backend and mobile integrations,
+              and <strong>NFC mailbox-style communication</strong>
+              for secure data exchange between devices.
+            </p>
+          </div>
+
+          <div class="about-image">KE</div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">
+          Skills &amp; Technologies
+        </h2>
+        <div class="skills animate-on-scroll">
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Embedded &amp; Firmware</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">C (CMSIS/HAL)</span
+                ><span class="skill-tag">C++</span
+                ><span class="skill-tag">STM32 (L4/L4x6)</span
+                ><span class="skill-tag">MSP430</span
+                ><span class="skill-tag">GPIO/I2C/SPI/UART</span
+                ><span class="skill-tag">Timers/RTOS</span
+                ><span class="skill-tag">DMA</span
+                ><span class="skill-tag">Bootloaders</span
+                ><span class="skill-tag">NFC (ST25DV)</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Mobile, Backend &amp; Vision</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Android (Kotlin/Java)</span
+                ><span class="skill-tag">Firebase/Auth</span
+                ><span class="skill-tag">Node.js</span
+                ><span class="skill-tag">REST APIs</span
+                ><span class="skill-tag">OpenCV</span
+                ><span class="skill-tag">Python</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Security &amp; Tools</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Cryptography (RSA/PGP)</span
+                ><span class="skill-tag">CMOX / X-CUBE-CRYPTOLIB</span
+                ><span class="skill-tag">Git</span
+                ><span class="skill-tag">Linux</span
+                ><span class="skill-tag">GDB/J-Link/ST-LINK</span
+                ><span class="skill-tag">CI basics</span
+                ><span class="skill-tag">Testing &amp; Debugging</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card animate-on-scroll">
+            <h3>NFC Smart Lock (Encrypted Mailbox)</h3>
+            <p>
+              End‑to‑end NFC access system: Android app writes encrypted
+              commands to an ST25DV64KC mailbox; STM32L476 verifies signature,
+              decrypts, actuates lock, and replies with encrypted status.
+              Energy‑harvesting experiments for actuation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">STM32L476</span
+              ><span class="tech-tag">ST25DV64KC</span
+              ><span class="tech-tag">Android (Kotlin)</span
+              ><span class="tech-tag">RSA/CMOX</span
+              ><span class="tech-tag">HAL/CMSIS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/khaledelnaggar" target="_blank"
+                >GitHub Profile</a
+              >
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll">
+            <h3>Educational RTOS on MSP430</h3>
+            <p>
+              Mini RTOS for MSP430: dispatcher, kernel entry, interrupts,
+              events, and wait‑until syscalls. Focus on deterministic timing,
+              context switching, and testing.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">MSP430</span><span class="tech-tag">C</span
+              ><span class="tech-tag">Interrupts</span
+              ><span class="tech-tag">Scheduling</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/khaledelnaggar" target="_blank"
+                >GitHub Profile</a
+              >
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll">
+            <h3>Dynamic Memory Allocator (malloc/free)</h3>
+            <p>
+              Implemented a custom heap memory allocator in C, supporting
+              malloc, free, and realloc with efficient block splitting and
+              coalescing. Focused on fragmentation management and performance
+              trade-offs, tested with real workloads to ensure correctness and
+              stability.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C</span
+              ><span class="tech-tag">Memory Management</span>
+              <span class="tech-tag">Data Structures</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/khaledelnaggar" target="_blank"
+                >GitHub Profile</a
+              >
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll">
+            <h3>Operating System Development (SWEB OS)</h3>
+            <p>
+              Extended an educational operating system with core OS
+              functionality. Implemented thread creation, scheduling, and
+              context/thread swapping to allow multitasking. Worked on process
+              management, virtual memory handling, and synchronization
+              primitives. Gained hands-on experience with low-level x86
+              architecture, interrupt handling, and kernel debugging.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C++</span><span class="tech-tag">x86</span
+              ><span class="tech-tag">Operating Systems</span
+              ><span class="tech-tag">Thread Scheduling</span
+              ><span class="tech-tag">Context Switching</span
+              ><span class="tech-tag">Virtual Memory</span
+              ><span class="tech-tag">Operating Systems</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/khaledelnaggar" target="_blank"
+                >GitHub Profile</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Experience</h2>
+        <div class="experience-timeline animate-on-scroll">
+          <div class="experience-item">
+            <h3>Open‑Source Contributor</h3>
+            <div class="company">Catrobat (Catroid)</div>
+            <div class="duration">2024 – 2025</div>
+            <p>
+              Contributed to Android app features and bug fixes; improved
+              developer docs; collaborated with maintainers on CI and UX polish.
+            </p>
+          </div>
+          <div class="experience-item">
+            <h3>Student Trainee (Software Development)</h3>
+            <div class="company">AVL List GmbH</div>
+            <div class="duration">2023 – 2025</div>
+            <ul>
+              <li>
+                Building modular application components and workflows integrated
+                into the larger Excite framework
+              </li>
+              <li>
+                Developing frontend and backend logic for simulation parameter
+                management, UI interactions, and data visualization
+              </li>
+              <li>
+                Integrating simulation engines with higher-level tools (e.g. for
+                model setup, input validation, result display)
+              </li>
+              <li>
+                Ensuring software robustness through testing, error handling,
+                and performance tuning
+              </li>
+              <li>
+                Collaborating with domain experts (mechanical, simulation
+                engineers) to align software with physical modeling requirements
+              </li>
+              <li>
+                Working on modular architecture, plugin systems, and ensuring
+                plug-and-play extensibility
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h3>Embedded Systems Projects</h3>
+            <div class="company">TU Graz &amp; Personal</div>
+            <div class="duration">2023 – Present</div>
+            <p>
+              Designed and implemented STM32/MSP430 firmware, NFC mailbox flows,
+              cryptographic verification, and RTOS primitives. Wrote thorough
+              tests and troubleshooting guides.
+            </p>
+          </div>
+          <div class="experience-item">
+            <h3>Software Projects</h3>
+            <div class="company">Personal &amp; Freelance</div>
+            <div class="duration">2021 – Present</div>
+            <p>
+              Android apps, backend APIs (Node.js/Firebase), and computer vision
+              utilities. Focus on clean interfaces and security‑first design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact animate-on-scroll">
+          <h2 class="section-title">Let's Work Together</h2>
+          <p>
+            I'm always interested in new opportunities and exciting projects.
+            Let's discuss how we can bring your ideas to life.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span>💼</span
+              ><a
+                href="https://www.linkedin.com/in/khaledelnaggar"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </div>
+            <div class="contact-item">
+              <span>🐙</span
+              ><a href="https://github.com/khaledelnaggar" target="_blank"
+                >GitHub</a
+              >
+            </div>
+            <div class="contact-item">
+              <span>✉️</span
+              ><a href="mailto:khaledelnajjar@outlook.com" target="_blank"
+                >E-Mail</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© 2025 Khaled Elnaggar. Built with love for low-level systems ☕</p>
+      </div>
+    </footer>
+
+    <script defer="True" src="assets/script.js"></script>
+  </body>
+</html>
