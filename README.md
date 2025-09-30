@@ -10,4 +10,4 @@ I enjoy working on low-level systems — from operating system kernels and memor
 
 ## 📫 Connect with me
 - [🐙 GitHub](https://github.com/khaledelnaggar)  
-- [💼 LinkedIn](https://www.linkedin.com/in/khaled-elnaggar-533343177)  
+- [💼 LinkedIn](https://www.linkedin.com/in/khaledelnaggar)  
