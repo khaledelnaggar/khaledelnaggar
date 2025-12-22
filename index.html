@@ -12,17 +12,19 @@
     <!-- Navigation -->
     <nav>
       <div class="container">
-        <a class="logo" href="#">KE</a>
+        <a class="logo" href="#home">KE</a>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-content">
@@ -30,9 +32,11 @@
         <p class="subtitle">Embedded Systems &amp; Software Engineer</p>
         <p class="description">
           I build secure, low-power systems that bridge hardware and
-          software—from STM32/MSP430 firmware and NFC communication to Android
-          apps, cryptography, and backend services. Currently Studying MSc in
-          Sofware Technology &amp; Embedded Systems at TU Graz.
+          software—from STM32/MSP430 firmware and NFC communication to mobile
+          apps, cryptography, and backend services. Recently, I’ve been focusing
+          on secure wireless systems (BLE/UWB/NFC) and automotive-grade embedded
+          software. Currently studying an MSc in Software Technology &amp;
+          Embedded Systems at TU Graz.
         </p>
         <div class="cta-buttons">
           <a class="btn btn-primary" href="#projects">View My Work</a>
@@ -40,6 +44,7 @@
         </div>
       </div>
     </section>
+
     <!-- About Section -->
     <section id="about">
       <div class="container">
@@ -67,6 +72,7 @@
         </div>
       </div>
     </section>
+
     <!-- Skills Section -->
     <section id="skills">
       <div class="container">
@@ -92,9 +98,9 @@
             <div class="skill-category">
               <h3>Mobile, Backend &amp; Vision</h3>
               <div class="skill-tags">
-                <span class="skill-tag">Android (Kotlin/Java)</span
-                ><span class="skill-tag">Firebase/Auth</span
-                ><span class="skill-tag">Node.js</span
+                <span class="skill-tag">Flutter (Android/iOS)</span>
+                <span class="skill-tag">Kotlin / Swift</span>
+                <span class="skill-tag">Firebase/Auth</span
                 ><span class="skill-tag">REST APIs</span
                 ><span class="skill-tag">OpenCV</span
                 ><span class="skill-tag">Python</span>
@@ -103,7 +109,7 @@
             <div class="skill-category">
               <h3>Security &amp; Tools</h3>
               <div class="skill-tags">
-                <span class="skill-tag">Cryptography (RSA/PGP)</span
+                <span class="skill-tag">Cryptography (RSA, signatures)</span
                 ><span class="skill-tag">CMOX / X-CUBE-CRYPTOLIB</span
                 ><span class="skill-tag">Git</span
                 ><span class="skill-tag">Linux</span
@@ -116,18 +122,65 @@
         </div>
       </div>
     </section>
+
     <!-- Projects Section -->
     <section id="projects">
       <div class="container">
         <h2 class="section-title animate-on-scroll">Featured Projects</h2>
         <div class="projects-grid">
           <div class="project-card animate-on-scroll">
+            <h3>Brake-by-Wire System (AURIX)</h3>
+            <p>
+              Implemented a brake-by-wire control system on an Infineon AURIX
+              platform as part of an Embedded Automotive Software course.
+              Designed task-based control logic, signal handling, and
+              fault-aware behavior with deterministic timing constraints.
+              Validated the system on real hardware via recorded demo tests.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Infineon AURIX</span>
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">Automotive Software</span>
+              <span class="tech-tag">RTOS Tasks</span>
+              <span class="tech-tag">Timing & Scheduling</span>
+              <span class="tech-tag">Safety-Critical</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://www.youtube.com/shorts/s8d-iqWzHBI"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Video</a
+              >
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <h3>Embedded Contact Tracing (BLE + UWB)</h3>
+            <p>
+              Built a contact-tracing system on Contiki-NG using BLE
+              advertising/scanning and GATT. Estimated proximity via calibrated
+              RSSI and refined distances using DW1000 UWB ranging (with fallback
+              on failures). Implemented time-based contact tracking, best-friend
+              ranking, and contamination state propagation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">Contiki-NG</span>
+              <span class="tech-tag">BLE (Adv/Scan/GATT)</span>
+              <span class="tech-tag">RSSI</span>
+              <span class="tech-tag">UWB (DW1000)</span>
+              <span class="tech-tag">Event-driven</span>
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
             <h3>NFC Smart Lock (Encrypted Mailbox)</h3>
             <p>
-              End‑to‑end NFC access system: Android app writes encrypted
+              End-to-end NFC access system: Android app writes encrypted
               commands to an ST25DV64KC mailbox; STM32L476 verifies signature,
               decrypts, actuates lock, and replies with encrypted status.
-              Energy‑harvesting experiments for actuation.
+              Energy-harvesting experiments for actuation.
             </p>
             <div class="project-tech">
               <span class="tech-tag">STM32L476</span
@@ -136,30 +189,22 @@
               ><span class="tech-tag">RSA/CMOX</span
               ><span class="tech-tag">HAL/CMSIS</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/khaledelnaggar" target="_blank"
-                >GitHub Profile</a
-              >
-            </div>
           </div>
+
           <div class="project-card animate-on-scroll">
             <h3>Educational RTOS on MSP430</h3>
             <p>
-              Mini RTOS for MSP430: dispatcher, kernel entry, interrupts,
-              events, and wait‑until syscalls. Focus on deterministic timing,
-              context switching, and testing.
+              Mini RTOS for MSP430: dispatcher, kernel entry, interrupts, events
+              and wait-until syscalls. Focus on deterministic timing, context
+              switching, and testing.
             </p>
             <div class="project-tech">
               <span class="tech-tag">MSP430</span><span class="tech-tag">C</span
               ><span class="tech-tag">Interrupts</span
               ><span class="tech-tag">Scheduling</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/khaledelnaggar" target="_blank"
-                >GitHub Profile</a
-              >
-            </div>
           </div>
+
           <div class="project-card animate-on-scroll">
             <h3>Dynamic Memory Allocator (malloc/free)</h3>
             <p>
@@ -175,8 +220,11 @@
               <span class="tech-tag">Data Structures</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/khaledelnaggar" target="_blank"
-                >GitHub Profile</a
+              <a
+                href="https://github.com/khaledelnaggar/Basic-Malloc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Link to Project</a
               >
             </div>
           </div>
@@ -195,25 +243,20 @@
               ><span class="tech-tag">Operating Systems</span
               ><span class="tech-tag">Thread Scheduling</span
               ><span class="tech-tag">Context Switching</span
-              ><span class="tech-tag">Virtual Memory</span
-              ><span class="tech-tag">Operating Systems</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/khaledelnaggar" target="_blank"
-                >GitHub Profile</a
-              >
+              ><span class="tech-tag">Virtual Memory</span>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Experience Section -->
     <section id="experience">
       <div class="container">
         <h2 class="section-title animate-on-scroll">Experience</h2>
         <div class="experience-timeline animate-on-scroll">
           <div class="experience-item">
-            <h3>Open‑Source Contributor</h3>
+            <h3>Open-Source Contributor</h3>
             <div class="company">Catrobat (Catroid)</div>
             <div class="duration">2024 – 2025</div>
             <p>
@@ -254,27 +297,60 @@
           </div>
 
           <div class="experience-item">
-            <h3>Embedded Systems Projects</h3>
-            <div class="company">TU Graz &amp; Personal</div>
+            <h3>Embedded & Wireless Systems Projects</h3>
+            <div class="company">TU Graz · Academic & Independent Projects</div>
             <div class="duration">2023 – Present</div>
             <p>
-              Designed and implemented STM32/MSP430 firmware, NFC mailbox flows,
-              cryptographic verification, and RTOS primitives. Wrote thorough
-              tests and troubleshooting guides.
+              Developed embedded firmware and wireless systems on STM32 and
+              MSP430, including BLE advertising, scanning, and GATT services,
+              NFC mailbox communication, cryptographic verification, and RTOS
+              primitives in resource-constrained environments.
             </p>
           </div>
+
           <div class="experience-item">
             <h3>Software Projects</h3>
             <div class="company">Personal &amp; Freelance</div>
             <div class="duration">2021 – Present</div>
             <p>
-              Android apps, backend APIs (Node.js/Firebase), and computer vision
-              utilities. Focus on clean interfaces and security‑first design.
+              Android apps, backend APIs, and computer vision utilities. Focus
+              on clean interfaces and security-first design.
             </p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Education</h2>
+
+        <div class="experience-timeline animate-on-scroll">
+          <div class="experience-item">
+            <h3>MSc Computer Science</h3>
+            <div class="company">TU Graz (Graz University of Technology)</div>
+            <div class="duration">2025 – Present</div>
+            <p>
+              Major in Software Technology, minor in Embedded Systems. Focus on
+              embedded software, wireless systems, and security-critical system
+              design.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>BSc Computer Science</h3>
+            <div class="company">TU Graz (Graz University of Technology)</div>
+            <div class="duration">2021 – 2025</div>
+            <p>
+              Strong foundation in systems programming, operating systems, and
+              low-level software development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact">
       <div class="container">
@@ -290,25 +366,28 @@
               ><a
                 href="https://www.linkedin.com/in/khaledelnaggar"
                 target="_blank"
+                rel="noopener noreferrer"
                 >LinkedIn</a
               >
             </div>
             <div class="contact-item">
               <span>🐙</span
-              ><a href="https://github.com/khaledelnaggar" target="_blank"
+              ><a
+                href="https://github.com/khaledelnaggar"
+                target="_blank"
+                rel="noopener noreferrer"
                 >GitHub</a
               >
             </div>
             <div class="contact-item">
               <span>✉️</span
-              ><a href="mailto:khaledelnajjar@outlook.com" target="_blank"
-                >E-Mail</a
-              >
+              ><a href="mailto:khaledelnajjar@outlook.com">E-Mail</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -316,6 +395,6 @@
       </div>
     </footer>
 
-    <script defer="True" src="assets/script.js"></script>
+    <script defer src="assets/script.js"></script>
   </body>
 </html>

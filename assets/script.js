@@ -1,58 +1,74 @@
-// Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
 
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    if (!href || href === "#") return;
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
-            });
-        }, observerOptions);
+    const target = document.querySelector(href);
+    if (!target) return;
 
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
+    e.preventDefault();
 
-        // Navigation background on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(15, 15, 35, 0.98)';
-            } else {
-                nav.style.background = 'rgba(15, 15, 35, 0.95)';
-            }
-        });
+    history.pushState(null, "", href);
 
-        // Typing effect for hero subtitle (optional enhancement)
-        const subtitle = document.querySelector('.hero .subtitle');
-        const text = subtitle.textContent;
-        subtitle.textContent = '';
-        
-        setTimeout(() => {
-            let i = 0;
-            const typeWriter = () => {
-                if (i < text.length) {
-                    subtitle.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 100);
-                }
-            };
-            typeWriter();
-        }, 1000);
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+});
+
+// Scroll animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px",
+};
+
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animated");
+      obs.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+  observer.observe(el);
+});
+
+// Navigation background on scroll
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector("nav");
+  if (!nav) return;
+
+  nav.style.background =
+    window.scrollY > 100 ? "rgba(15, 15, 35, 0.98)" : "rgba(15, 15, 35, 0.95)";
+});
+
+
+(() => {
+  const subtitle = document.querySelector(".hero .subtitle");
+  if (!subtitle) return;
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion) return;
+
+  const text = subtitle.textContent || "";
+  subtitle.textContent = "";
+
+  setTimeout(() => {
+    let i = 0;
+    const typeWriter = () => {
+      if (i < text.length) {
+        subtitle.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 60);
+      }
+    };
+    typeWriter();
+  }, 600);
+})();
