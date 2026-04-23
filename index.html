@@ -1,0 +1,459 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Khaled Elnaggar - Embedded Systems &amp; Software Engineer</title>
+
+    <link href="assets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="container">
+        <a class="logo" href="#home"
+          ><img src="assets/github_avatar.png" alt="Khaled Elnaggar"
+        /></a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Khaled Elnaggar</h1>
+        <p class="subtitle">Embedded Systems &amp; Software Engineer</p>
+        <p class="description">
+          I build secure embedded systems and wireless applications, with a
+          focus on low-power design, NFC, and Bluetooth. In my current role, I
+          develop NFC firmware and mobile apps for a passive NFC-powered smart
+          lock. My ongoing Master's thesis focuses on robust Bluetooth 6.0
+          ranging under RF interference.
+        </p>
+        <div class="cta-buttons">
+          <a class="btn btn-primary" href="#projects">View My Work</a>
+          <a class="btn btn-secondary" href="#contact">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">About Me</h2>
+        <div class="about-content animate-on-scroll">
+          <div class="about-text">
+            <p>
+              I’m a firmware engineer focused on embedded systems, wireless
+              communication, and security. I enjoy low-level work and
+              understanding how systems behave under the hood, from memory and
+              scheduling to cryptographic primitives and RF protocols. My work
+              includes firmware development, secure NFC-based communication, and
+              mobile app development.
+            </p>
+            <p>
+              My current research is centered on Bluetooth 6.0 Channel Sounding.
+              More specifically, I study how RF interference and multipath
+              affect ranging accuracy indoors, and how adaptive PHY settings on
+              the device can improve robustness in real-world environments.
+            </p>
+          </div>
+
+          <div class="about-image">
+            <img src="assets/portfolio_img.jpeg" alt="Khaled Elnaggar" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">
+          Skills &amp; Technologies
+        </h2>
+        <div class="skills animate-on-scroll">
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Embedded &amp; Firmware</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">C (HAL)</span
+                ><span class="skill-tag">C++</span
+                ><span class="skill-tag">BLE / Zephyr</span
+                ><span class="skill-tag">NFC (ST25DV)</span
+                ><span class="skill-tag">GPIO/I2C/SPI/UART</span
+                ><span class="skill-tag">Timers/RTOS</span
+                ><span class="skill-tag">DMA</span
+                ><span class="skill-tag">Bootloaders</span
+                ><span class="skill-tag">STM32</span
+                ><span class="skill-tag">Nordic nRF54</span
+                ><span class="skill-tag">Nordic nRF53</span
+                ><span class="skill-tag">MSP430</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Mobile Apps</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Flutter (Android/iOS)</span>
+                <span class="skill-tag">Kotlin / Swift</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Security &amp; Tools</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Cryptography (RSA, signatures)</span
+                ><span class="skill-tag">CMOX / X-CUBE-CRYPTOLIB</span
+                ><span class="skill-tag">Git</span
+                ><span class="skill-tag">Linux</span
+                ><span class="skill-tag">GDB/J-Link/ST-LINK</span
+                ><span class="skill-tag">CI basics</span
+                ><span class="skill-tag">Testing &amp; Debugging</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card animate-on-scroll">
+            <h3>
+              BLE 6.0 Channel Sounding Ranging under RF Interference (MSc)
+            </h3>
+            <p>
+              Master's seminar project and thesis on experimentally
+              characterizing Bluetooth 6.0 Channel Sounding ranging under RF
+              interference on Nordic nRF54-DK. Collect runtime observables
+              (TQI/DQI, IQ samples, per-channel RSSI, retransmissions, PER)
+              across LOS scenarios in Wi-Fi/BLE-congested environments to inform
+              on-device PHY-settings adaptation. Thesis extends this with a
+              per-channel health score, dynamic channel blacklisting,
+              unhealthy-tone filtering, and an adaptive step budget to improve
+              ranging accuracy, precision, and energy trade-offs.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Bluetooth 6.0</span>
+              <span class="tech-tag">Channel Sounding</span>
+              <span class="tech-tag">Nordic nRF54</span>
+              <span class="tech-tag">Phase-based Ranging</span>
+              <span class="tech-tag">IQ Samples</span>
+              <span class="tech-tag">RF Interference</span>
+              <span class="tech-tag">Zephyr</span>
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <h3>BLE Audio on Nordic nRF53 (Zephyr)</h3>
+            <p>
+              Developed a BLE Audio data exchange/transfer application on Nordic
+              nRF53 hardware using the Zephyr RTOS on a custom development kit.
+              Worked across the stack — Bluetooth LE Audio, I2C/I2S/UART
+              peripherals, threading, Linux Devicetree, and CMake.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Zephyr RTOS</span>
+              <span class="tech-tag">Nordic nRF53</span>
+              <span class="tech-tag">Bluetooth LE Audio</span>
+              <span class="tech-tag">I2C / I2S / UART</span>
+              <span class="tech-tag">Threading</span>
+              <span class="tech-tag">Devicetree</span>
+              <span class="tech-tag">CMake</span>
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <h3>Smart Plant IoT System (CoAP + Contiki-NG)</h3>
+            <p>
+              Full working smart-plant IoT node built on a BlueBite (nRF52840)
+              with a custom Plantboard add-on (STM32G031 Cortex-M0+ as I2C
+              target) exposing a capacitive soil moisture sensor and a TI
+              DRV8210 half-bridge motor driver for a submersible water pump.
+              Exposed the device to the internet over CoAP for remote monitoring
+              and watering.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Contiki-NG</span>
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">CoAP</span>
+              <span class="tech-tag">nRF52840</span>
+              <span class="tech-tag">STM32G031</span>
+              <span class="tech-tag">I2C</span>
+              <span class="tech-tag">PWM</span>
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <h3>Brake-by-Wire System (AURIX TC297)</h3>
+            <p>
+              Implemented a brake-by-wire control system on an Infineon AURIX
+              platform as part of an Embedded Automotive Software course.
+              Designed task-based control logic, signal handling, and
+              fault-aware behavior with deterministic timing constraints.
+              Validated the system on real hardware via recorded demo tests.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Infineon AURIX TC297 </span>
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">Automotive Software</span>
+              <span class="tech-tag">RTOS Tasks</span>
+              <span class="tech-tag">Timing & Scheduling</span>
+              <span class="tech-tag">Safety-Critical</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://www.youtube.com/shorts/s8d-iqWzHBI"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Demo Video</a
+              >
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <h3>Embedded Contact Tracing (BLE + UWB)</h3>
+            <p>
+              Built a contact-tracing system on Contiki-NG using BLE
+              advertising/scanning and GATT. Estimated proximity via calibrated
+              RSSI and refined distances using DW1000 UWB ranging (with fallback
+              on failures). Implemented time-based contact tracking, best-friend
+              ranking, and contamination state propagation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">Contiki-NG</span>
+              <span class="tech-tag">BLE (Adv/Scan/GATT)</span>
+              <span class="tech-tag">RSSI</span>
+              <span class="tech-tag">UWB (DW1000)</span>
+              <span class="tech-tag">Event-driven</span>
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <h3>NFC Smart Lock (Encrypted Mailbox)</h3>
+            <p>
+              End-to-end NFC access system: Mobile app writes encrypted commands
+              to an ST25DV64KC mailbox; STM32 verifies signature, decrypts,
+              actuates lock, and replies with encrypted status.
+              Energy-harvesting experiments for actuation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">STM32</span
+              ><span class="tech-tag">ST25DV64KC</span
+              ><span class="tech-tag">Android/iOS (Flutter)</span
+              ><span class="tech-tag">RSA/CMOX</span
+              ><span class="tech-tag">HAL</span>
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <h3>Educational RTOS on MSP430</h3>
+            <p>
+              Mini RTOS for MSP430: dispatcher, kernel entry, interrupts, events
+              and wait-until syscalls. Focus on deterministic timing, context
+              switching, and testing.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">MSP430</span><span class="tech-tag">C</span
+              ><span class="tech-tag">Interrupts</span
+              ><span class="tech-tag">Scheduling</span>
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <h3>Dynamic Memory Allocator (malloc/free)</h3>
+            <p>
+              Implemented a custom heap memory allocator in C, supporting
+              malloc, free, and realloc with efficient block splitting and
+              merging. Focused on fragmentation management and performance
+              trade-offs, tested with real workloads to ensure correctness and
+              stability.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C</span
+              ><span class="tech-tag">Memory Management</span>
+              <span class="tech-tag">Data Structures</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/khaledelnaggar/Basic-Malloc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Link to Project</a
+              >
+            </div>
+          </div>
+          <div class="project-card animate-on-scroll">
+            <h3>Operating System Development (SWEB OS)</h3>
+            <p>
+              Extended an educational operating system with core OS
+              functionality. Implemented thread creation, scheduling, and
+              context/thread swapping to allow multitasking. Worked on process
+              management, virtual memory handling, and synchronization
+              primitives. Gained hands-on experience with low-level x86
+              architecture, interrupt handling, and kernel debugging.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C++</span><span class="tech-tag">x86</span
+              ><span class="tech-tag">Operating Systems</span
+              ><span class="tech-tag">Thread Scheduling</span
+              ><span class="tech-tag">Context Switching</span
+              ><span class="tech-tag">Virtual Memory</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Experience</h2>
+        <div class="experience-timeline animate-on-scroll">
+          <div class="experience-item">
+            <h3>Software Engineer</h3>
+            <div class="company">Bernd Zwattendorfer</div>
+            <div class="duration">2025 – 2026</div>
+            <p>
+              Full-stack ownership of a passive NFC-powered smart lock: STM32
+              firmware, NFC mailbox communication, cryptographic command
+              verification, low-power actuation, mobile app, backend services,
+              and database design—all powered by energy harvested from a phone's
+              NFC field.
+            </p>
+          </div>
+          <div class="experience-item">
+            <h3>Open-Source Contributor &amp; Member</h3>
+            <div class="company">Catrobat (Catroid)</div>
+            <div class="duration">2024 – Jan 2026</div>
+            <p>
+              Contributed to Android app features and bug fixes; improved
+              developer docs; collaborated with maintainers on CI and UX polish.
+            </p>
+          </div>
+          <div class="experience-item">
+            <h3>Working Student (Software Development)</h3>
+            <div class="company">AVL List GmbH</div>
+            <div class="duration">2023 – 2025</div>
+            <ul>
+              <li>
+                Building modular application components and workflows integrated
+                into the larger Excite framework
+              </li>
+              <li>
+                Developing frontend and backend logic for simulation parameter
+                management, UI interactions, and data visualization
+              </li>
+              <li>
+                Integrating simulation engines with higher-level tools (e.g. for
+                model setup, input validation, result display)
+              </li>
+              <li>
+                Ensuring software robustness through testing, error handling,
+                and performance tuning
+              </li>
+              <li>
+                Collaborating with domain experts (mechanical, simulation
+                engineers) to align software with physical modeling requirements
+              </li>
+              <li>
+                Working on modular architecture, plugin systems, and ensuring
+                plug-and-play extensibility
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Education</h2>
+
+        <div class="experience-timeline animate-on-scroll">
+          <div class="experience-item">
+            <h3>Master of Science in Computer Science</h3>
+            <div class="company">Graz University of Technology</div>
+            <div class="duration">2025 – Present</div>
+            <p>
+              Major in Software Technology, minor in Embedded Systems. Master's
+              project ongoing; thesis in planning phase on the design of a
+              runtime adaptation scheme to improve resilience to RF interference
+              in BLE v6 channel sounding.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <div class="company">Graz University of Technology</div>
+            <div class="duration">2021 – 2025</div>
+            <p>
+              Strong foundation in systems programming, operating systems, and
+              low-level software development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact animate-on-scroll">
+          <h2 class="section-title">Let's Work Together</h2>
+          <p>
+            I'm always interested in new opportunities and exciting projects.
+            Let's discuss how we can bring your ideas to life.
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span>💼</span
+              ><a
+                href="https://www.linkedin.com/in/khaledelnaggar"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </div>
+            <div class="contact-item">
+              <span>🐙</span
+              ><a
+                href="https://github.com/khaledelnaggar"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </div>
+            <div class="contact-item">
+              <span>✉️</span
+              ><a href="mailto:khaledelnajjar@outlook.com">E-Mail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© 2026 Khaled Elnaggar. Built with love for low-level systems ☕</p>
+      </div>
+    </footer>
+
+    <script defer src="assets/script.js"></script>
+  </body>
+</html>

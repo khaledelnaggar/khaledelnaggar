@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+.AppleDouble
+.Spotlight-V100
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node (if any tooling)
+node_modules/
